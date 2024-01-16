@@ -10,3 +10,4 @@ http://192.168.0.122:8181/api/sys/swagger-ui.html#/
 
 sec 安全 AI 管理 请求前拼接 /api/sec/v1/
 http://192.168.0.122:8210/swagger-ui.html#/
+# urban-lifeline-web
