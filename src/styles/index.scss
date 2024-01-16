@@ -1,0 +1,186 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+@import "./transition.scss";
+@import "./element-ui.scss";
+@import "./sidebar.scss";
+
+body {
+  background: #f1f6fa;
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, Arial, sans-serif;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #ffff;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 8px;
+  background-color: rgba(144, 147, 153, 0.3);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  width: 8px;
+  background-color: rgba(144, 147, 153, 0.3);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+
+label {
+  // font-weight: 700;
+  color: #54607a;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #1a1a1a;
+  color: #1a1a1a;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-column {
+    flex-direction: column;
+  }
+}
+
+// main-container global css
+.app-container {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+
+  background: #fff;
+  padding: 12px 16px;
+
+  &:has(.table-container) {
+    padding: 0;
+  }
+
+  .query-form {
+    border-bottom: 1px solid #ebeef5;
+    padding: 12px 16px 0 16px;
+
+    &.el-form--inline .el-form-item {
+      margin-right: 24px;
+    }
+  }
+
+  .table-buttons {
+    margin: 12px 0;
+  }
+
+  .table-container {
+    padding: 12px 16px;
+
+    .table-buttons {
+      margin: 0 0 12px 0;
+    }
+  }
+
+  .pagination-box {
+    margin-top: 1rem;
+    text-align: right;
+    .el-pagination .btn-prev .el-icon,
+    .el-pagination .btn-next .el-icon {
+      color: #868d9e;
+    }
+  }
+}
+
+// 风险等级小圆点
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 0.25rem;
+  border-radius: 50%;
+
+  &-1 {
+    background-color: #4279e4;
+  }
+
+  &-2 {
+    background-color: #3eb973;
+  }
+
+  &-3 {
+    background-color: #f0d550;
+  }
+
+  &-4 {
+    background-color: #f08d50;
+  }
+
+  &-5 {
+    background-color: #eb595c;
+  }
+
+  &.warn1 {
+    background-color: #eb595c;
+  }
+  &.warn2 {
+    background-color: #f08d50;
+  }
+  &.warn3 {
+    background-color: #f0d550;
+  }
+}
